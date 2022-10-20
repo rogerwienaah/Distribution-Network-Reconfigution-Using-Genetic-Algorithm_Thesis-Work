@@ -1,0 +1,35 @@
+% ----inserting of DGs into the bus system
+function [Lweights] = DG_pow()
+% Rweights -- reactive power
+% Lweights -- real power
+  global Lweights
+  %global Rweights
+  
+  bus_number = input('ENTER BUS NUMBER 1: ');
+  DG_real_pow = input('ENTER DG REAL POWER 1: ');
+  %DG_reac_pow = input('ENTER DG REACTIVE POWER: ');
+  
+  bus_number_2 = input('ENTER BUS NUMBER 2: ');
+  DG_real_pow_2 = input('ENTER DG REAL POWER 2: ');
+  %DG_reac_pow_2 = input('ENTER DG REACTIVE POWER 2: ');
+  
+  bus_number_3 = input('ENTER BUS NUMBER 3: ');
+  DG_real_pow_3 = input('ENTER DG REAL POWER 3: ');
+  %DG_reac_pow_3 = input('ENTER DG REACTIVE POWER 3: ');
+  
+  
+  %DG_reac_pow = input('ENTER DG REACTIVE POWER: ');
+  
+  %Rweights(bus_number)= Rweights(bus_number) - DG_reac_pow;
+  %Rweights(bus_number_3)= Rweights(bus_number_2) - DG_reac_pow_2;
+  %Rweights(bus_number_3)= Rweights(bus_number_3) - DG_reac_pow_3;
+  
+  Lweights(bus_number) = Lweights(bus_number) - DG_real_pow;
+  
+  Lweights(bus_number_2) = Lweights(bus_number_2) - DG_real_pow_2;
+  
+  Lweights(bus_number_3) = Lweights(bus_number_3) - DG_real_pow_3;
+  
+  
+end
+  
